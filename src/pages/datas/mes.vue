@@ -22,7 +22,7 @@
 export default {
   data () {
     return {
-      model: 2,
+      model: 1,
       min: 0,
       max: 400,
 
