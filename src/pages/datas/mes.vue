@@ -10,6 +10,8 @@
             track-color="white"
             :min="min"
             :max="max"
+                    readonly
+
           >
             $ {{ model }}
       </q-knob>
