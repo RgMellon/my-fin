@@ -21,17 +21,17 @@
       <div class="balanco">
         <q-carousel class="text-white">
           <q-carousel-slide class="first-c">
-            <p style="font-size:1.4rem;"> R$ 400,00 </p>
+            <p style="font-size:1.6rem;"> R$ 400,00 </p>
             <p class="titulo"> Gasto </p>
             <p class="info"> <q-icon name="info" /> Quantidade que gastou até o momento</p>
           </q-carousel-slide>
         <q-carousel-slide class="first-c">
-           <p style="font-size:1.4rem;">  R$ 200,00 </p>
+           <p style="font-size:1.6rem;">  R$ 200,00 </p>
           <p class="titulo"> Sobra </p>
           <p class="info"> <q-icon name="info" /> O valor que sobra para gastar </p>
         </q-carousel-slide>
         <q-carousel-slide class="first-c">
-            <p style="font-size:1.4rem;">  R$ 100,00 </p>
+            <p style="font-size:1.6rem;">  R$ 100,00 </p>
            <p class="titulo"> Posso gastar </p>
            <p class="info"> <q-icon name="info" /> Quantidade que posso gastar </p>
         </q-carousel-slide>
@@ -72,18 +72,18 @@ export default {
 
 .titulo {
   color: #9c27b0;
-  margin-top: 1rem;
+  margin-top: 1.3rem;
 }
 .first-c {
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   border-radius: 10px;
   background: white;
   color: black;
-  height: 176px;
+  height: 186px;
 }
 
 .info {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .s-c {
   border-radius: 10px;
@@ -91,7 +91,7 @@ export default {
 }
 .titulo  {
   color: #9c27b0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .grafico {
