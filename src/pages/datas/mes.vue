@@ -75,10 +75,11 @@ export default {
   margin-top: 1rem;
 }
 .first-c {
-  margin-top: 1rem;
+  margin-top: 2rem;
   border-radius: 10px;
   background: white;
   color: black;
+  height: 176px;
 }
 
 .info {
