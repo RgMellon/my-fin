@@ -45,7 +45,7 @@
 export default {
   data () {
     return {
-      model: 1,
+      model: 200,
       min: 0,
       max: 400,
 
