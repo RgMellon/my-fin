@@ -5,7 +5,7 @@
       <section class="grafico row justify-center">
         <q-knob
             v-model="model"
-            size="140px"
+            size="240px"
             :color="medeCor"
             line-width="2px"
             track-color="white"
