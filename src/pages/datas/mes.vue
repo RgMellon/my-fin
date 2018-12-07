@@ -1,8 +1,9 @@
 <template>
-  <q-page padding>
-    <div class="row justify-center" style="margin-top:2rem;">
+  <q-page class="mp">
+    <div style="width: 800px; max-width:90vw;">
 
-      <q-knob
+      <section class="grafico row justify-center">
+        <q-knob
             v-model="model"
             size="140px"
             :color="medeCor"
@@ -10,13 +11,33 @@
             track-color="white"
             :min="min"
             :max="max"
-                    readonly
+            readonly
 
           >
             $ {{ model }}
-      </q-knob>
-    </div>
+        </q-knob>
+      </section>
 
+      <div class="balanco">
+        <q-carousel class="text-white">
+          <q-carousel-slide class="first-c">
+            <p style="font-size:1.4rem;"> R$ 400,00 </p>
+            <p class="titulo"> Gasto </p>
+            <p class="info"> <q-icon name="info" /> Quantidade que gastou até o momento</p>
+          </q-carousel-slide>
+        <q-carousel-slide class="first-c">
+           <p style="font-size:1.4rem;">  R$ 200,00 </p>
+          <p class="titulo"> Sobra </p>
+          <p class="info"> <q-icon name="info" /> O valor que sobra para gastar </p>
+        </q-carousel-slide>
+        <q-carousel-slide class="first-c">
+            <p style="font-size:1.4rem;">  R$ 100,00 </p>
+           <p class="titulo"> Posso gastar </p>
+           <p class="info"> <q-icon name="info" /> Quantidade que posso gastar </p>
+        </q-carousel-slide>
+      </q-carousel>
+      </div>
+  </div>
   </q-page>
 </template>
 
@@ -44,4 +65,44 @@ export default {
 </script>
 
 <style>
+
+.info {
+  color: gray;
+}
+
+.titulo {
+  color: #9c27b0;
+  margin-top: 1rem;
+}
+.first-c {
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: white;
+  color: black;
+}
+
+.info {
+  font-size: 0.8rem;
+}
+.s-c {
+  border-radius: 10px;
+  background: #9c27b0;
+}
+.titulo  {
+  color: #9c27b0;
+  font-size: 0.9rem;
+}
+
+.grafico {
+  margin-top: 2rem;
+}
+
+.meio {
+  background: #9c27b0;
+}
+
+.mp {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 </style>
