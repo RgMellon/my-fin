@@ -27,7 +27,7 @@ module.exports = function (ctx) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          // loader: 'eslint-loader',
           exclude: /node_modules/
         })
       }
@@ -55,7 +55,8 @@ module.exports = function (ctx) {
         'QItemMain',
         'QItemSide',
         'QTabs',
-        'QTab'
+        'QTab',
+        'QKnob'
       ],
       directives: [
         'Ripple'

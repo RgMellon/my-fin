@@ -1,41 +1,40 @@
 <template>
   <q-page padding>
-      <div class="row justify-around">
-        <div>
-          <h2 class="h2-borda"> Gasto </h2>
-          <p> 200,00 R$</p>
-        </div>
-
+        <div class="row justify-around">
+          <gasto-dia />
         <div class="separator"> </div>
 
         <div>
-          <h2 class="h2-borda" s> Meta de <br> Gastos </h2>
-          <p> 600,00 R$ </p>
+          <meta-gastos-dia />
         </div>
       </div>
+
       <div class="row justify-center">
         <h2> Valor Restante </h2>
       </div>
       <div class="row justify-center">
-          <div class="quantidade-total">
-            <h2> 400,00 R$ </h2>
-          </div>
+          <restante-dia />
       </div>
   </q-page>
 </template>
 
 <script>
+
+import GastoDia from '../../components/GastoDia';
+import MetaDeGastosDia from '../../components/MetaDeGastosDia';
+import RestanteDia from '../../components/RestanteDia';
+
 export default {
+  components: {
+    'gasto-dia': GastoDia,
+    'meta-gastos-dia': MetaDeGastosDia,
+    'restante-dia' : RestanteDia
+  },
   name: 'PageDia'
 }
 </script>
 
 <style>
-  h2 {
-    font-size: 1.1rem;
-
-  }
-
   .h2-borda {
     border-bottom: 1px solid #ac00b2;
   }
