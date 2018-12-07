@@ -91,7 +91,7 @@ export default {
 }
 .titulo  {
   color: #9c27b0;
-  font-size: 1rem;
+  font-size: 1srem;
 }
 
 .grafico {
