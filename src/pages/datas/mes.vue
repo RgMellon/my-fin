@@ -1,7 +1,6 @@
 <template>
-  <q-page class="mp">
-    <div style="width: 800px; max-width:90vw;">
-
+  <page-wrapper>
+    <template slot="conteudo">
       <section class="grafico row justify-center">
         <q-knob
             v-model="model"
@@ -25,24 +24,39 @@
             <p class="titulo"> Gasto </p>
             <p class="info"> <q-icon name="info" /> Quantidade que gastou até o momento</p>
           </q-carousel-slide>
-        <q-carousel-slide class="first-c">
-           <p style="font-size:1.6rem;">  R$ 200,00 </p>
-          <p class="titulo"> Sobra </p>
-          <p class="info"> <q-icon name="info" /> O valor que sobra para gastar </p>
-        </q-carousel-slide>
-        <q-carousel-slide class="first-c">
-            <p style="font-size:1.6rem;">  R$ 100,00 </p>
-           <p class="titulo"> Posso gastar </p>
-           <p class="info"> <q-icon name="info" /> Quantidade que posso gastar </p>
-        </q-carousel-slide>
+          <q-carousel-slide class="first-c">
+            <p style="font-size:1.6rem;">  R$ 200,00 </p>
+            <p class="titulo"> Sobra </p>
+            <p class="info"> <q-icon name="info" /> O valor que sobra para gastar </p>
+          </q-carousel-slide>
+          <q-carousel-slide class="first-c">
+              <p style="font-size:1.6rem;">  R$ 100,00 </p>
+            <p class="titulo"> Posso gastar </p>
+            <p class="info"> <q-icon name="info" /> Quantidade que posso gastar </p>
+          </q-carousel-slide>
       </q-carousel>
-      </div>
-  </div>
-  </q-page>
+
+        <div class="btn-adiciona">
+            <q-btn  icon-right="send" class="btn-adiciona"
+                    style="background: white;" to="/adiciona/despesas"
+                    label="Adicionar despesa"
+                    color="purple"
+                    />
+
+        </div>
+    </div>
+    </template>
+  </page-wrapper>
 </template>
 
 <script>
+
+import wrapper from '../../components/wrapper';
+
 export default {
+  components: {
+    'page-wrapper' : wrapper
+  },
   data () {
     return {
       model: 200,
@@ -66,6 +80,13 @@ export default {
 
 <style>
 
+.btn-adiciona {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
 .info {
   color: gray;
 }
@@ -102,8 +123,5 @@ export default {
   background: #9c27b0;
 }
 
-.mp {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+
 </style>

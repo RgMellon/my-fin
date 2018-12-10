@@ -59,10 +59,16 @@ module.exports = function (ctx) {
         'QKnob',
         'QCarousel',
         'QCarouselSlide',
-        'QCarouselControl'
+        'QCarouselControl',
+        'QInput',
+        'QField',
+        'QDatetime',
+        'QSelect'
+
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'GoBack'
       ],
       // Quasar plugins
       plugins: [

@@ -7,10 +7,17 @@ const routes = [
       { path: '/', component: () => import('pages/datas/dia.vue') },
       { path: '/mes', component: () => import('pages/datas/mes.vue') }
     ]
+  },
+  {
+    path: '/adiciona',
+    component: () => import('layouts/LayoutTwo.vue'),
+    children: [
+      { path: '/adiciona/despesas', component: () => import('pages/adicionar-despesas.vue') }
+
+    ]
   }
 ]
 
-// Always leave this as last one
 if (process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
