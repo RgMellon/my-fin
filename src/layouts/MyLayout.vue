@@ -7,7 +7,7 @@
         align="justify"
       >
         <q-tab @click="redirecionaDia"  slot="title" label="Dia"  />
-        <q-tab slot="title" label="Semana" />
+        <q-tab @click="redirecionaSemana" slot="title" label="Semana" />
         <q-tab @click="redirecionaMes"  slot="title" label="Mês" />
       </q-tabs>
 
@@ -34,6 +34,9 @@ export default {
     },
     redirecionaDia() {
       this.$router.push('/');
+    },
+    redirecionaSemana() {
+      this.$router.push('/semana');
     }
   }
 }

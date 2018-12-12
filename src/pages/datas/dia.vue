@@ -1,65 +1,41 @@
 <template>
-  <q-page padding>
-        <div class="row justify-around">
-          <gasto-dia />
-        <div class="separator"> </div>
-
-        <div>
-          <meta-gastos-dia />
-        </div>
-      </div>
-
-      <div class="row justify-center">
-        <h2> Valor Restante </h2>
-      </div>
-      <div class="row justify-center">
-          <restante-dia />
-      </div>
-  </q-page>
+    <page-wrapper>
+      <template slot="conteudo">
+          <section class="grafico row justify-center">
+            <knob :maximo="20" :minimo="0" :atual="1"> </knob>
+          </section>
+          <slider gasto="20,00" sobra="10,00" total="50,00"> </slider>
+          <div class="btn-adiciona">
+            <btn-despesas></btn-despesas>
+          </div>
+      </template>
+    </page-wrapper>
 </template>
 
 <script>
 
-import GastoDia from '../../components/GastoDia';
-import MetaDeGastosDia from '../../components/MetaDeGastosDia';
-import RestanteDia from '../../components/RestanteDia';
+import wrapper from '../../components/wrapper';
+import Slider from '../../components/Slider';
+import Knob from '../../components/Knob';
+import BtnDespesas from '../../components/BtnDespesas';
 
 export default {
   components: {
-    'gasto-dia': GastoDia,
-    'meta-gastos-dia': MetaDeGastosDia,
-    'restante-dia' : RestanteDia
+    'page-wrapper': wrapper,
+    'slider': Slider,
+    'knob': Knob,
+    'btn-despesas' : BtnDespesas
   },
   name: 'PageDia'
 }
 </script>
 
 <style>
-  .h2-borda {
-    border-bottom: 1px solid #ac00b2;
-  }
-
-  p {
-    font-size: 15px;
-    color: gray;
-  }
-
-  .separator {
-     width: 2px;
-     background: #ac00b2;
-     min-height: 100px;
-  }
-
-  .quantidade-total {
-    border: 2px solid #ac00b2;
-    padding: 0.1rem;
-    background: #ac00b2;
-    color: white;
-
-    border-radius: 1rem
-  }
-
-  .quantidade-total h2 {
-    font-size: 1rem;
-  }
+.btn-adiciona {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
 </style>

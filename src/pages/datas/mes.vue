@@ -2,47 +2,13 @@
   <page-wrapper>
     <template slot="conteudo">
       <section class="grafico row justify-center">
-        <q-knob
-            v-model="model"
-            size="240px"
-            :color="medeCor"
-            line-width="2px"
-            track-color="white"
-            :min="min"
-            :max="max"
-            readonly
-
-          >
-            $ {{ model }}
-        </q-knob>
+        <knob :maximo="400" :minimo="0" :atual="100"> </knob>
       </section>
 
       <div class="balanco">
-        <q-carousel class="text-white">
-          <q-carousel-slide class="first-c">
-            <p style="font-size:1.6rem;"> R$ 400,00 </p>
-            <p class="titulo"> Gasto </p>
-            <p class="info"> <q-icon name="info" /> Quantidade que gastou até o momento</p>
-          </q-carousel-slide>
-          <q-carousel-slide class="first-c">
-            <p style="font-size:1.6rem;">  R$ 200,00 </p>
-            <p class="titulo"> Sobra </p>
-            <p class="info"> <q-icon name="info" /> O valor que sobra para gastar </p>
-          </q-carousel-slide>
-          <q-carousel-slide class="first-c">
-              <p style="font-size:1.6rem;">  R$ 100,00 </p>
-            <p class="titulo"> Posso gastar </p>
-            <p class="info"> <q-icon name="info" /> Quantidade que posso gastar </p>
-          </q-carousel-slide>
-      </q-carousel>
-
+        <slider gasto="200,00" sobra="100,00" total="600,00"> </slider>
         <div class="btn-adiciona">
-            <q-btn  icon-right="send" class="btn-adiciona"
-                    style="background: white;" to="/adiciona/despesas"
-                    label="Adicionar despesa"
-                    color="purple"
-                    />
-
+           <btn-despesas></btn-despesas>
         </div>
     </div>
     </template>
@@ -52,29 +18,26 @@
 <script>
 
 import wrapper from '../../components/wrapper';
+import Slider from '../../components/Slider';
+import Knob from '../../components/Knob';
+import BtnDespesas from '../../components/BtnDespesas';
 
 export default {
   components: {
-    'page-wrapper' : wrapper
+    'page-wrapper' : wrapper,
+    'slider': Slider,
+    'knob': Knob,
+     'btn-despesas' : BtnDespesas
   },
   data () {
     return {
-      model: 200,
+      model: 300,
       min: 0,
       max: 400,
-
     }
   },
-  computed: {
-    medeCor() {
-        const umTerco = this.max * 0.33;
-        const doisTerco = this.max * 0.66;
 
-        if(this.model <= umTerco) return 'green'
-        else if( this.model > umTerco && this.model <= doisTerco) return 'yellow'
-        else return 'red'
-    }
-  }
+
 }
 </script>
 
