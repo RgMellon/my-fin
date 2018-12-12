@@ -1,6 +1,7 @@
 <template>
   <page-wrapper>
     <template slot="conteudo">
+
       <section class="grafico row justify-center">
         <knob :maximo="30" :minimo="0" :atual="5"> </knob>
       </section>
@@ -10,7 +11,13 @@
         <div class="btn-adiciona">
           <btn-despesas></btn-despesas>
         </div>
-    </div>
+      </div>
+
+      <div class="page-config">
+        <q-btn to="/config/adiciona" style="background:white; box-shadow: none;"
+               color="purple" size="2rem" icon="keyboard_arrow_down" />
+      </div>
+
     </template>
   </page-wrapper>
 </template>
@@ -86,5 +93,10 @@ export default {
   background: #9c27b0;
 }
 
+.page-config{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
 
 </style>

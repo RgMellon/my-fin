@@ -16,4 +16,7 @@ export default {
 </script>
 
 <style>
+.btn-adiciona {
+  z-index: 99999;
+}
 </style>

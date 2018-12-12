@@ -16,6 +16,14 @@ const routes = [
       { path: 'despesas', component: () => import('pages/adicionar-despesas.vue') }
 
     ]
+  },
+  {
+    path: '/config',
+    component: () => import('layouts/Config.vue'),
+    children: [
+      { path: 'adiciona', component: () => import('pages/Index.vue') }
+
+    ]
   }
 ]
 

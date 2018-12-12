@@ -1,6 +1,8 @@
 <template>
   <div id="q-app">
-    <router-view />
+    <transition>
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -11,4 +13,5 @@ export default {
 </script>
 
 <style>
+
 </style>
