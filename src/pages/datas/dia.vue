@@ -14,7 +14,7 @@
       </div>
 
       <div class="page-config">
-        <q-btn to="/config/adiciona" style="background:white; box-shadow: none;"
+        <q-btn to="/config" style="background:white; box-shadow: none;"
                color="purple" size="2rem" icon="keyboard_arrow_down" />
       </div>
 

@@ -21,7 +21,8 @@ const routes = [
     path: '/config',
     component: () => import('layouts/Config.vue'),
     children: [
-      { path: 'adiciona', component: () => import('pages/Index.vue') }
+      { path: '/', component: () => import('pages/configuracoes') },
+      { path: 'gasto-mes', component: () => import('pages/config/gasto-mes.vue') }
 
     ]
   }
