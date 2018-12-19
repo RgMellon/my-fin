@@ -2,11 +2,11 @@
   <page-wrapper>
     <template slot="conteudo">
       <section class="grafico row justify-center">
-        <knob :maximo="40" :minimo="0" :atual="10"> </knob>
+        <knob :maximo="max" :minimo="0" :atual="0"> </knob>
       </section>
 
       <div class="balanco">
-        <slider gasto="200,00" sobra="100,00" total="600,00"> </slider>
+        <slider gasto="200,00" sobra="100,00" :total="max"> </slider>
         <div class="btn-adiciona">
           <btn-despesas></btn-despesas>
         </div>
@@ -21,6 +21,7 @@ import wrapper from '../../components/wrapper';
 import Slider from '../../components/Slider';
 import Knob from '../../components/Knob';
 import BtnDespesas from '../../components/BtnDespesas';
+import Controle from '../../services/Controle';
 
 export default {
   components: {
@@ -29,11 +30,19 @@ export default {
     'knob': Knob,
     'btn-despesas' : BtnDespesas
   },
+
+  mounted() {
+    let c = new Controle()
+    c.semana()
+      .then(res => {
+        this.max = res.mediaSemana
+      })
+  },
   data () {
     return {
-      model: 300,
+      model: 0,
       min: 0,
-      max: 400,
+      max: 0,
     }
   },
 

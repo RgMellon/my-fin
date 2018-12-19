@@ -8,7 +8,7 @@
             label="Total que gostaria de gastar"
             color="purple"
           >
-            <q-input color="purple" v-model="total" />
+            <q-input color="purple" v-model="maximo" />
         </q-field>
 
         <q-field class="gasto"
@@ -16,11 +16,12 @@
             label="Quantidade de dias"
             color="purple"
           >
-            <q-input color="purple" v-model="qtdDias" />
+            <q-input color="purple" v-model="dias" />
         </q-field>
 
         <div class="input-add">
-           <q-btn @click="simulateProgress(1)" :loading="loading1" color="purple" class="full-width" label="Adicionar" />
+           <q-btn @click="adicionaMaximo()" :loading="load" color="purple"
+            class="full-width" label="Adicionar" />
         </div>
 
       </div>
@@ -30,6 +31,7 @@
 
 <script>
 import wrapper from '../../components/wrapper';
+import MaximoGasto from '../../services/configuracoes/MaximoGasto';
 
 export default {
   components: {
@@ -38,26 +40,32 @@ export default {
   name: 'PageGasto',
   data(){
     return {
-      total: '',
-      qtdDias: '',
-      loading1: false,
+      maximo: '',
+      dias: '',
+      load: false,
     }
   },
   methods: {
-     simulateProgress (number) {
-      // we set loading state
-      this[`loading${number}`] = true
-      // simulate a delay
-      setTimeout(() => {
+    adicionaMaximo() {
+      this.load = true;
+      let mx = new MaximoGasto();
+      mx.defineMaximoValorMaximo(this.maximo, this.dias)
+      .then(res =>
         this.$q.notify({
           message: `Configurações adicionadas`,
           type: 'positive',
           icon: 'done',
           position: 'top-right'
         })
-        this[`loading${number}`] = false
-      }, 3000)
-    },
+      ).then(l => this.load = false)
+      .catch(err => {
+        this.$q.notify({
+          message: 'Já existe um controle em aberto :\\'
+        })
+        this.load = false
+      })
+
+    }
   }
 }
 </script>

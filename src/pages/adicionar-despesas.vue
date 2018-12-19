@@ -2,13 +2,25 @@
   <page-wrapper>
     <template slot="conteudo">
       <section class="form-add-despesa">
+
         <div class="input-add">
           <q-field
             icon="title"
             label="Titulo"
             color="purple"
           >
-            <q-input color="purple" v-model="text2" />
+            <q-input color="purple" v-model="compra.titulo" />
+          </q-field>
+        </div>
+
+        <div class="input-add">
+          <q-field
+            icon="attach_money"
+            label="Preço"
+            color="purple"
+            type="tel"
+          >
+            <q-input color="purple" v-model="compra.preco" />
           </q-field>
         </div>
 
@@ -17,11 +29,13 @@
             icon="access_time"
             label="Data da compra"
           >
+
           <q-datetime
             type="date"
-            v-model="date"
+            v-model="compra.data_compra"
             color="purple"
             float-label="Escolher data"
+
           />
           </q-field>
         </div>
@@ -33,7 +47,7 @@
           >
             <q-select
               float-label="Categoria" color="purple"
-              v-model="select"
+              v-model="compra.categoria"
               :options="[
                 {label: 'Comida', value: 'bucharest'},
                 {label: 'Lazer', value: 'london'},
@@ -48,12 +62,12 @@
             label="Local"
             color="purple"
           >
-            <q-input color="purple" v-model="text2" />
+            <q-input color="purple" v-model="compra.local" />
           </q-field>
         </div>
 
         <div class="input-add">
-           <q-btn @click="simulateProgress(1)" :loading="loading1" color="purple" class="full-width" label="Adicionar" />
+           <q-btn @click="adicionaGasto()" :loading="load" color="purple" class="full-width" label="Adicionar" />
         </div>
       </section>
     </template>
@@ -64,6 +78,7 @@
 
 import { Notify } from 'quasar';
 import wrapper from '../components/wrapper';
+import Compra from '../services/compras/Compra';
 
 export default {
   components: {
@@ -72,29 +87,24 @@ export default {
   name: 'PageAdicionaDespesa',
   data() {
     return {
-      text2:'',
-      date: '',
-      select: '',
-      loading1: false,
+      compra : {
+        titulo:'',
+        data_compra: '',
+        categoria: '',
+        local: '',
+        preco: ''
+      },
+      load: false,
     }
   },
 
   methods: {
-     simulateProgress (number) {
-      // we set loading state
-      this[`loading${number}`] = true
-      // simulate a delay
-      setTimeout(() => {
-        this.$q.notify({
-          message: `Despesa adicionada`,
-          type: 'positive',
-          icon: 'done',
-          position: 'top-right'
-        })
-        this[`loading${number}`] = false
-      }, 3000)
-    },
+    adicionaGasto() {
+      let c = new Compra();
+      c.abater(this.compra);
+    }
   }
+
 }
 </script>
 

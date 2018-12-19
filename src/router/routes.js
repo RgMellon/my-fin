@@ -22,7 +22,8 @@ const routes = [
     component: () => import('layouts/Config.vue'),
     children: [
       { path: '/', component: () => import('pages/configuracoes') },
-      { path: 'gasto-mes', component: () => import('pages/config/gasto-mes.vue') }
+      { path: 'gasto-mes', component: () => import('pages/config/gasto-mes.vue') },
+      { path: 'lista-gasto', component: () => import('pages/config/lista-gasto.vue') }
 
     ]
   }

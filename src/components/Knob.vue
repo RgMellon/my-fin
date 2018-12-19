@@ -1,6 +1,7 @@
 <template>
+<div>
   <q-knob
-    v-model="model"
+    v-model="this.atual"
     size="240px"
     :color="medeCor"
     line-width="3px"
@@ -9,19 +10,20 @@
     :max="this.maximo"
     readonly
   >
-    $ {{ this.model }}
+    {{ this.atual }}
   </q-knob>
+
+</div>
 </template>
 
 <script>
 export default {
   props: ['minimo', 'maximo', 'atual'],
   name: 'ComponentKnob',
+
   data () {
     return {
-      model: this.atual,
-      // min: this.minimo,
-      // max: this.maximo,
+
     }
   },
   computed: {
@@ -29,8 +31,8 @@ export default {
         const umTerco = this.maximo * 0.33;
         const doisTerco = this.maximo * 0.66;
 
-        if(this.model <= umTerco) return 'green'
-        else if( this.model > umTerco && this.model <= doisTerco) return 'yellow'
+        if(this.atual <= umTerco) return 'green'
+        else if( this.atual > umTerco && this.atual <= doisTerco) return 'yellow'
         else return 'red'
     }
   }

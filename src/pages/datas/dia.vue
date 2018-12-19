@@ -1,13 +1,12 @@
 <template>
   <page-wrapper>
     <template slot="conteudo">
-
       <section class="grafico row justify-center">
-        <knob :maximo="30" :minimo="0" :atual="5"> </knob>
+        <knob :maximo="max" :minimo="0" :atual="model"> </knob>
       </section>
 
       <div class="balanco">
-        <slider gasto="200,00" sobra="100,00" total="600,00"> </slider>
+        <slider :gasto="model" :sobra="calculaSobra" :total="max"> </slider>
         <div class="btn-adiciona">
           <btn-despesas></btn-despesas>
         </div>
@@ -28,6 +27,7 @@ import wrapper from '../../components/wrapper';
 import Slider from '../../components/Slider';
 import Knob from '../../components/Knob';
 import BtnDespesas from '../../components/BtnDespesas';
+import Controle from '../../services/Controle';
 
 export default {
   components: {
@@ -36,13 +36,30 @@ export default {
     'knob': Knob,
     'btn-despesas' : BtnDespesas
   },
+
+  mounted() {
+    let c = new Controle();
+    c.dia()
+      .then(res => {
+        this.max = res.mediaDia
+        this.model = res.gastoDia
+      });
+  },
+
   data () {
     return {
-      model: 300,
+      model: 0,
       min: 0,
-      max: 400,
+      max: 0,
     }
   },
+
+  computed: {
+    calculaSobra() {
+      if(this.max - this.model < 0 ) return 0
+      else return this.max - this.model
+    }
+  }
 
 
 }

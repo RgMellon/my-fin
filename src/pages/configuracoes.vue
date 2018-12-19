@@ -10,6 +10,13 @@
             </q-item>
           </div>
           <q-item-separator />
+          <div @click="listaGastos()" class="item">
+            <q-item>
+              <q-item-side icon="list" />
+                <q-item-main label="Lista de gastos" />
+                <q-item-side right icon="chevron_right" />
+            </q-item>
+          </div>
         </q-list>
     </template>
   </page-wrapper>
@@ -26,6 +33,9 @@ export default {
   methods :{
      gastoMes() {
         this.$router.push('config/gasto-mes')
+     },
+     listaGastos() {
+        this.$router.push('config/lista-gasto')
      }
   }
 }
