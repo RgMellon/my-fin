@@ -46,25 +46,14 @@
             label="Categoria da compra"
           >
             <q-select
-              float-label="Categoria" color="purple"
-              v-model="compra.categoria"
-              :options="[
-                {label: 'Comida', value: 'bucharest'},
-                {label: 'Lazer', value: 'london'},
-                {label: 'Combustivel', value: 'paris'}
-              ]"
-            />
+            v-model="compra.categoria"
+            float-label="Escolher por categoria"
+            radio
+          :options="selectOptions"
+        />
           </q-field>
         </div>
-        <div class="input-add">
-          <q-field
-            icon="place"
-            label="Local"
-            color="purple"
-          >
-            <q-input color="purple" v-model="compra.local" />
-          </q-field>
-        </div>
+
 
         <div class="input-add">
            <q-btn @click="adicionaGasto()" :loading="load" color="purple" class="full-width" label="Adicionar" />
@@ -79,6 +68,7 @@
 import { Notify } from 'quasar';
 import wrapper from '../components/wrapper';
 import Compra from '../services/compras/Compra';
+import Categoria from '../services/configuracoes/Categoria';
 
 export default {
   components: {
@@ -91,10 +81,11 @@ export default {
         titulo:'',
         data_compra: '',
         categoria: '',
-        local: '',
+        local: 'v',
         preco: ''
       },
       load: false,
+      selectOptions: [],
     }
   },
 
@@ -103,6 +94,27 @@ export default {
       let c = new Compra();
       c.abater(this.compra);
     }
+  },
+
+  mounted() {
+      this.setaCategorias
+  },
+
+  computed: {
+    setaCategorias() {
+      let c = new Categoria()
+        c.getCategoria()
+        .then(res => {
+            res.forEach(el => {
+                this.selectOptions.push(
+                  {
+                    label: el.categoria,
+                    value: el.categoria
+                  }
+                )
+            });
+        })
+    },
   }
 
 }

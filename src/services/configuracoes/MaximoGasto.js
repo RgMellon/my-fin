@@ -7,7 +7,7 @@ export default class MaximoGasto {
       maximo,
       dias
     }
-    return axios.post(`${path()}/valo-maximo`, gasto)
+    return axios.post(`${path()}/valor-maximo`, gasto)
       .then(res => res.data)
       .catch((err) => {
         throw new Error('Já existe um controle aberto ' + err.message)

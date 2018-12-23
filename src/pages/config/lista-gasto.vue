@@ -4,12 +4,12 @@
         <q-list highlight>
           <div v-for="(i, index) of this.compras" :key="index" class="item">
             <q-item>
-              <q-item-side  />
-                <q-item-side left> R$ {{ i.preco }} / </q-item-side>
-                <q-item-main right :label="i.titulo" />
+                <q-item-side> R$ {{ i.preco }} </q-item-side>
+                <q-item-side> | </q-item-side>
+                <q-item-main :label="i.titulo" />
 
                 <div @click="deleteCompra(i.id)">
-                  <q-item-side right color="red" icon="delete_outline" />
+                  <q-item-side color="red" icon="delete_outline" />
                 </div>
             </q-item>
             <hr>

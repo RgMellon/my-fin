@@ -17,7 +17,23 @@
                 <q-item-side right icon="chevron_right" />
             </q-item>
           </div>
-        </q-list>
+          <q-item-separator />
+          <div @click="fechaConta()" class="item">
+            <q-item>
+              <q-item-side icon="done" />
+                <q-item-main label="Fechar Conta" />
+                <q-item-side right icon="chevron_right" />
+            </q-item>
+          </div>
+          <q-item-separator />
+          <div @click="categoria()" class="item">
+            <q-item>
+              <q-item-side icon="apps" />
+                <q-item-main label="Adicionar | Ver Categorias " />
+                <q-item-side right icon="chevron_right" />
+            </q-item>
+          </div>
+      </q-list>
     </template>
   </page-wrapper>
 </template>
@@ -36,6 +52,12 @@ export default {
      },
      listaGastos() {
         this.$router.push('config/lista-gasto')
+     },
+     fechaConta() {
+        this.$router.push('config/fecha-conta')
+     },
+     categoria() {
+        this.$router.push('config/categoria')
      }
   }
 }

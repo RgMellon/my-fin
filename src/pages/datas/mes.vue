@@ -34,8 +34,8 @@ export default {
     let c = new Controle()
     c.mes()
       .then(res => {
-        this.max = res.mediaMes
-        this.model = res.gastoMes
+          this.max = res.mediaMes
+          this.model = res.gastoMes
       })
   },
   data () {
@@ -64,18 +64,18 @@ export default {
   height: 50px;
 }
 .info {
-  color: gray;
+  color: #fda900;
 }
 
 .titulo {
-  color: #9c27b0;
+  color: white;
   margin-top: 1.3rem;
 }
 .first-c {
   margin-top: 2.4rem;
   border-radius: 10px;
   background: white;
-  color: black;
+  color: white;
   height: 186px;
 }
 

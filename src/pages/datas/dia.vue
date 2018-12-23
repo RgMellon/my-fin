@@ -1,6 +1,7 @@
 <template>
   <page-wrapper>
     <template slot="conteudo">
+
       <section class="grafico row justify-center">
         <knob :maximo="max" :minimo="0" :atual="model"> </knob>
       </section>
@@ -14,7 +15,7 @@
 
       <div class="page-config">
         <q-btn to="/config" style="background:white; box-shadow: none;"
-               color="purple" size="2rem" icon="keyboard_arrow_down" />
+               size="2rem" icon="keyboard_arrow_down" />
       </div>
 
     </template>
@@ -79,19 +80,23 @@ export default {
 }
 
 .titulo {
-  color: #9c27b0;
+  color: white !important;
   margin-top: 1.3rem;
+  font-size: 1.2rem;
 }
 .first-c {
   margin-top: 2.4rem;
   border-radius: 10px;
-  background: white;
-  color: black;
+  background: #5c4679 !important;
+  color: white;
   height: 186px;
 }
 
 .info {
   font-size: 1rem;
+  color: #fda900;
+  padding-top: 1rem;
+  border-top: 1px solid #fda900;
 }
 .s-c {
   border-radius: 10px;
@@ -114,6 +119,10 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+}
+
+.page-config .q-btn {
+  background: inherit !important;
 }
 
 </style>

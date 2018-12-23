@@ -1,7 +1,7 @@
 <template>
   <q-layout class="bg" view="lHh Lpr lFf">
       <q-tabs
-        color="purple"
+        color="#674679e3"
         text-color="white"
         class="shadow"
         align="justify"
@@ -44,6 +44,9 @@ export default {
 
 <style>
 .bg {
-  background: #9c27b0;
+  background: #573769;
+}
+.q-tabs {
+  background: #5c4679;
 }
 </style>

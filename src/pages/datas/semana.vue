@@ -70,14 +70,18 @@ export default {
 .first-c {
   margin-top: 2.4rem;
   border-radius: 10px;
-  background: white;
-  color: black;
+  background: #5c4679 !important;
+  color: white;
   height: 186px;
 }
 
 .info {
   font-size: 1rem;
+  color: #fda900;
+  padding-top: 1rem;
+  border-top: 1px solid #fda900;
 }
+
 .s-c {
   border-radius: 10px;
   background: #9c27b0;

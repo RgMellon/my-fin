@@ -2,7 +2,7 @@
   <q-btn  icon-right="send" class="btn-adiciona"
                     style="background: white;" to="/adiciona/despesas"
                     label="Adicionar despesa"
-                    color="purple"
+
                     />
 </template>
 
@@ -18,5 +18,10 @@ export default {
 <style>
 .btn-adiciona {
   z-index: 99999;
+}
+
+.q-btn {
+   background: #5c4679 !important;
+   color: white;
 }
 </style>
