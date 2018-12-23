@@ -123,6 +123,7 @@ export default {
 
 .page-config .q-btn {
   background: inherit !important;
+  color: white;
 }
 
 </style>

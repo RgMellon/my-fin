@@ -4,17 +4,41 @@ const routes = [
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/datas/dia.vue') },
-      { path: 'mes', component: () => import('pages/datas/mes.vue') },
-      { path: 'semana', component: () => import('pages/datas/semana.vue') }
+      { path: '',
+        component: () => import('pages/datas/dia.vue'),
+        meta: { faturaOpen: true }
+      },
+
+      { path: 'mes',
+        component: () => import('pages/datas/mes.vue'),
+        meta: { faturaOpen: true }
+      },
+
+      { path: 'semana',
+        component: () => import('pages/datas/semana.vue'),
+        meta: { faturaOpen: true }
+      }
     ]
   },
+
   {
     path: '/adiciona',
     component: () => import('layouts/LayoutTwo.vue'),
     children: [
-      { path: 'despesas', component: () => import('pages/adicionar-despesas.vue') }
-
+      { path: 'despesas',
+        component: () => import('pages/adicionar-despesas.vue'),
+        meta: { faturaOpen: true }
+      }
+    ]
+  },
+  {
+    path: '/fatura',
+    component: () => import('layouts/Fatura.vue'),
+    children: [
+      { path: '',
+        component: () => import('pages/adicionar-fatura.vue'),
+        name: 'fatura'
+      }
     ]
   },
   {

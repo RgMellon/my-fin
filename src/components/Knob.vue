@@ -40,4 +40,7 @@ export default {
 </script>
 
 <style>
+.text-green {
+   color: #fda900 !important;
+}
 </style>

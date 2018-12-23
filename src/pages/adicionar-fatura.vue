@@ -1,0 +1,130 @@
+<template>
+  <section class="fin">
+    <div class="header">
+      <div class="bg-opaco"></div>
+      <div class="icon">
+          <img src="../assets/img/icon.png" alt="">
+      </div>
+    </div>
+    <div class="separator"></div>
+
+    <div class="area-form">
+      <page-wrapper  style="min-height:50vh !important;">
+        <template slot="conteudo">
+        <div class="gasto">
+          <q-field
+            icon="attach_money"
+            label="Total que gostaria de gastar"
+            color="purple"
+          >
+          <q-input color="purple" v-model="maximo" />
+        </q-field>
+
+        <q-field class="gasto"
+            icon="calendar_today"
+            label="Quantidade de dias"
+            color="purple"
+          >
+            <q-input color="purple" v-model="dias" />
+        </q-field>
+
+        <div class="input-add">
+           <q-btn @click="adicionaMaximo()" :loading="load" color="purple"
+            class="full-width" label="Adicionar" />
+        </div>
+
+      </div>
+        </template>
+      </page-wrapper>
+    </div>
+  </section>
+
+</template>
+
+<script>
+import wrapper from '../components/wrapper';
+import MaximoGasto from '../services/configuracoes/MaximoGasto';
+
+export default {
+
+  name: 'PageAdicionarFatura',
+
+  components: {
+    'page-wrapper' : wrapper
+  },
+
+  data(){
+    return {
+      maximo: '',
+      dias: '',
+      load: false,
+    }
+  },
+  methods: {
+    adicionaMaximo() {
+      this.load = true;
+      let mx = new MaximoGasto();
+      mx.defineMaximoValorMaximo(this.maximo, this.dias)
+      .then(res =>
+        this.$q.notify({
+          message: `Configurações adicionadas`,
+          type: 'positive',
+          icon: 'done',
+          position: 'top-right'
+        })
+      ).then(l => this.load = false)
+      .catch(err => {
+        this.$q.notify({
+          message: 'Já existe um controle em aberto :\\'
+        })
+        this.load = false
+      })
+
+    }
+  }
+}
+</script>
+
+<style>
+.header {
+  height: 30vh;
+  background: url('../assets/img/bgFin.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-opaco {
+  width: 100%;
+  height: 30vh;
+  background: #705d89;
+  z-index: 99999;
+  opacity: 0.9;
+  position: relative;
+}
+.icon {
+    position: absolute;
+    top: 120px;
+    z-index: 999999;
+    left: 130px;
+    background: #705d89;
+    border-radius: 110px;
+}
+.separator {
+     height: 70px;
+    background: #fda900e0;
+}
+.icon img {
+ width: 130px;
+    box-shadow: 5px 7px 3px 0px rgba(1, 1, 1, 0.17);
+    border-radius: 90px;
+}
+.input-add .q-btn {
+  background: #705d89 !important;
+}
+.gasto {
+  margin-top: 4rem;
+}
+.input-add {
+  margin-top: 3rem;
+}
+
+</style>

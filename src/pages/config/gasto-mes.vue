@@ -1,30 +1,7 @@
 <template>
   <page-wrapper>
     <template slot="conteudo">
-      <div class="gasto">
 
-        <q-field
-            icon="attach_money"
-            label="Total que gostaria de gastar"
-            color="purple"
-          >
-            <q-input color="purple" v-model="maximo" />
-        </q-field>
-
-        <q-field class="gasto"
-            icon="calendar_today"
-            label="Quantidade de dias"
-            color="purple"
-          >
-            <q-input color="purple" v-model="dias" />
-        </q-field>
-
-        <div class="input-add">
-           <q-btn @click="adicionaMaximo()" :loading="load" color="purple"
-            class="full-width" label="Adicionar" />
-        </div>
-
-      </div>
     </template>
   </page-wrapper>
 </template>

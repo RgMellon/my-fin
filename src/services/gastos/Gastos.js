@@ -9,6 +9,19 @@ export default class Gastos {
 
   fecharFatura () {
     axios.put(`${path()}/fechar-fatura`)
-      .then(res => console.log(res))
+      .then(res => this.setSession(false))
+  }
+
+  faturaisOpen () {
+    this.getGastosAbertos()
+      .then(res => this.setSession(true))
+      .catch(err => this.setSession(false))
+  }
+
+  setSession (valor) {
+    sessionStorage.setItem('fatura',
+      JSON.stringify({
+        'open': valor
+      }))
   }
 }
