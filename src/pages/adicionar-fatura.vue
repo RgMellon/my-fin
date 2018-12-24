@@ -6,7 +6,9 @@
           <img src="../assets/img/icon.png" alt="">
       </div>
     </div>
-    <div class="separator"></div>
+    <div class="separator">
+      <p> MyFin </p>
+    </div>
 
     <div class="area-form">
       <page-wrapper  style="min-height:50vh !important;">
@@ -87,14 +89,14 @@ export default {
 
 <style>
 .header {
-  height: 30vh;
+  height: 25vh;
   background: url('../assets/img/bgFin.jpg');
   background-repeat: no-repeat;
   background-position: center;
 }
 .bg-opaco {
   width: 100%;
-  height: 30vh;
+  height: 25vh;
   background: #705d89;
   z-index: 99999;
   opacity: 0.9;
@@ -102,14 +104,14 @@ export default {
 }
 .icon {
     position: absolute;
-    top: 120px;
+    top: 80px;
     z-index: 999999;
     left: 130px;
     background: #705d89;
     border-radius: 110px;
 }
 .separator {
-     height: 70px;
+     height: 100px;
     background: #fda900e0;
 }
 .icon img {
