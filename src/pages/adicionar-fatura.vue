@@ -113,6 +113,17 @@ export default {
 .separator {
      height: 100px;
     background: #fda900e0;
+        display: flex;
+    align-items: flex-end;
+    color: white;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.separator p {
+  display: flex;
+  align-items: flex-end;
 }
 .icon img {
  width: 130px;
