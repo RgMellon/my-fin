@@ -103,12 +103,16 @@ export default {
   position: relative;
 }
 .icon {
-    position: absolute;
+       position: absolute;
     top: 80px;
     z-index: 999999;
-    left: 130px;
-    background: #705d89;
+    /* left: 130px; */
+    /* background: #705d89; */
     border-radius: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .separator {
      height: 100px;
@@ -126,9 +130,11 @@ export default {
   align-items: flex-end;
 }
 .icon img {
- width: 130px;
+     width: 130px;
+    -webkit-box-shadow: 5px 7px 3px 0px rgba(1, 1, 1, 0.17);
     box-shadow: 5px 7px 3px 0px rgba(1, 1, 1, 0.17);
     border-radius: 90px;
+        background: #705d89ba;
 }
 .input-add .q-btn {
   background: #705d89 !important;
