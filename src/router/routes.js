@@ -5,18 +5,15 @@ const routes = [
     component: () => import('layouts/MyLayout.vue'),
     children: [
       { path: '',
-        component: () => import('pages/datas/dia.vue'),
-        meta: { faturaOpen: true }
+        component: () => import('pages/datas/dia.vue')
       },
 
       { path: 'mes',
-        component: () => import('pages/datas/mes.vue'),
-        meta: { faturaOpen: true }
+        component: () => import('pages/datas/mes.vue')
       },
 
       { path: 'semana',
-        component: () => import('pages/datas/semana.vue'),
-        meta: { faturaOpen: true }
+        component: () => import('pages/datas/semana.vue')
       }
     ]
   },
@@ -45,11 +42,26 @@ const routes = [
     path: '/config',
     component: () => import('layouts/Config.vue'),
     children: [
-      { path: '/', component: () => import('pages/configuracoes') },
-      { path: 'gasto-mes', component: () => import('pages/config/gasto-mes.vue') },
-      { path: 'lista-gasto', component: () => import('pages/config/lista-gasto.vue') },
-      { path: 'fecha-conta', component: () => import('pages/config/fecha-conta.vue') },
-      { path: 'categoria', component: () => import('pages/config/categoria.vue') }
+      { path: '/',
+        component: () => import('pages/configuracoes'),
+        meta: { faturaOpen: true }
+      },
+      { path: 'gasto-mes',
+        component: () => import('pages/config/gasto-mes.vue'),
+        meta: { faturaOpen: true }
+      },
+      { path: 'lista-gasto',
+        component: () => import('pages/config/lista-gasto.vue'),
+        meta: { faturaOpen: true }
+      },
+      { path: 'fecha-conta',
+        component: () => import('pages/config/fecha-conta.vue'),
+        meta: { faturaOpen: true }
+      },
+      { path: 'categoria',
+        component: () => import('pages/config/categoria.vue'),
+        meta: { faturaOpen: true }
+      }
     ]
   }
 ]

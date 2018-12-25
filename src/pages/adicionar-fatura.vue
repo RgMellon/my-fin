@@ -104,7 +104,7 @@ export default {
 .bg-opaco {
   width: 100%;
   height: 25vh;
-  background: #705d89;
+  background: #5c4679;
   z-index: 99999;
   opacity: 0.9;
   position: relative;
@@ -141,10 +141,10 @@ export default {
     -webkit-box-shadow: 5px 7px 3px 0px rgba(1, 1, 1, 0.17);
     box-shadow: 5px 7px 3px 0px rgba(1, 1, 1, 0.17);
     border-radius: 90px;
-           background: #705d89;
+    background:#5c4679;
 }
 .input-add .q-btn {
-  background: #705d89 !important;
+  background: #5c4679 !important;
 }
 .gasto {
   margin-top: 4rem;

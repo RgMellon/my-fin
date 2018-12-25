@@ -1,5 +1,5 @@
 <template>
-  <q-layout class="bg" view="lHh Lpr lFf">
+  <q-layout class="bg" v-touch-swipe="handler" view="lHh Lpr lFf">
       <q-tabs
         color="#674679e3"
         text-color="white"
@@ -37,6 +37,11 @@ export default {
     },
     redirecionaSemana() {
       this.$router.push('/semana');
+    },
+    handler (obj) {
+      if(obj.direction == 'down') {
+        this.$router.push('/config')
+      }
     }
   }
 }

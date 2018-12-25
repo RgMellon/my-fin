@@ -13,11 +13,6 @@
         </div>
       </div>
 
-      <div class="page-config">
-        <q-btn to="/config" style="background:white; box-shadow: none;"
-               size="2rem" icon="keyboard_arrow_down" />
-      </div>
-
     </template>
   </page-wrapper>
 </template>
