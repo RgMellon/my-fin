@@ -88,7 +88,11 @@ export default {
     handler (obj) {
         if(obj.direction == 'right') {
           alert('oi');
-        } // "right"
+        }
+
+        if(obj.direction == 'left') {
+          this.$router.push('/')
+        }
     }
   }
 }
