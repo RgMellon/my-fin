@@ -30,6 +30,7 @@ import Knob from '../../components/Knob';
 import BtnDespesas from '../../components/BtnDespesas';
 import Controle from '../../services/Controle';
 
+
 export default {
   components: {
     'page-wrapper' : wrapper,
@@ -39,12 +40,8 @@ export default {
   },
 
   mounted() {
-    let c = new Controle();
-    c.dia()
-      .then(res => {
-        this.max = res.mediaDia
-        this.model = res.gastoDia
-      });
+    this.setaValores;
+
   },
 
   data () {
@@ -59,7 +56,16 @@ export default {
     calculaSobra() {
       if(this.max - this.model < 0 ) return 0
       else return this.max - this.model
-    }
+    },
+    setaValores() {
+      let c = new Controle();
+        c.dia()
+          .then(res => {
+          this.max = res.mediaDia
+          this.model = res.gastoDia
+        });
+    },
+
   }
 
 
