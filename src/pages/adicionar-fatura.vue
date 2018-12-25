@@ -1,5 +1,5 @@
 <template>
-  <section class="fin">
+  <section class="fin" v-touch-swipe="handler">
     <div class="header">
       <div class="bg-opaco"></div>
       <div class="icon">
@@ -67,6 +67,7 @@ export default {
       this.load = true;
       let mx = new MaximoGasto();
       mx.defineMaximoValorMaximo(this.maximo, this.dias)
+      .then(redi => this.$router.push('/'))
       .then(res =>
         this.$q.notify({
           message: `Configurações adicionadas`,
@@ -74,7 +75,8 @@ export default {
           icon: 'done',
           position: 'top-right'
         })
-      ).then(l => this.load = false)
+      )
+
       .catch(err => {
         this.$q.notify({
           message: 'Já existe um controle em aberto :\\'
@@ -82,6 +84,11 @@ export default {
         this.load = false
       })
 
+    },
+    handler (obj) {
+        if(obj.direction == 'right') {
+          alert('oi');
+        } // "right"
     }
   }
 }

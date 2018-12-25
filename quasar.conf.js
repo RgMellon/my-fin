@@ -70,7 +70,8 @@ module.exports = function (ctx) {
       ],
       directives: [
         'Ripple',
-        'GoBack'
+        'GoBack',
+        'TouchSwipe'
       ],
       // Quasar plugins
       plugins: [

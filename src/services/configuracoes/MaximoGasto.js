@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { path } from '../../aux/path.js'
+import Session from '../../aux/Session';
 
 export default class MaximoGasto {
   defineMaximoValorMaximo (maximo, dias) {
@@ -8,7 +9,10 @@ export default class MaximoGasto {
       dias
     }
     return axios.post(`${path()}/valor-maximo`, gasto)
-      .then(res => res.data)
+      .then(res => {
+        let s = new Session()
+        s.setSession(true)
+      })
       .catch((err) => {
         throw new Error('Já existe um controle aberto ' + err.message)
       })

@@ -88,6 +88,7 @@ export default {
     fecharFatura() {
       let g = new Gastos();
       g.fecharFatura()
+      .then(res => this.$router.push('/'))
     }
   },
 

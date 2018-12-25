@@ -8,7 +8,7 @@ export default class Gastos {
   }
 
   fecharFatura () {
-    axios.put(`${path()}/fechar-fatura`)
+    return axios.put(`${path()}/fechar-fatura`)
       .then(res => this.setSession(false))
   }
 
