@@ -7,7 +7,6 @@ export default ({router}) => {
     g.faturaisOpen()
 
     if (to.meta.faturaOpen && fatIsOpen() === false) {
-
       next({name: 'fatura'})
     } else {
       next()
