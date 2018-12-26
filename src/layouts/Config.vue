@@ -10,7 +10,7 @@
           </q-toolbar-title>
           <q-btn style="color:#573769" flat round dense  v-go-back=" '/' " icon="home" />
         </q-toolbar>
-      </q-layout-header>
+    </q-layout-header>
     <q-page-container>
 
         <router-view />

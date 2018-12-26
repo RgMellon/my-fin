@@ -39,6 +39,16 @@ const routes = [
     ]
   },
   {
+    path: '/predefinido',
+    component: () => import('layouts/Predefinido.vue'),
+    children: [
+      { path: '',
+        component: () => import('pages/gastos-predefinidos.vue'),
+        name: 'predefinido'
+      }
+    ]
+  },
+  {
     path: '/config',
     component: () => import('layouts/Config.vue'),
     children: [
@@ -46,8 +56,8 @@ const routes = [
         component: () => import('pages/configuracoes'),
         meta: { faturaOpen: true }
       },
-      { path: 'gasto-mes',
-        component: () => import('pages/config/gasto-mes.vue'),
+      { path: 'add-predefinidos',
+        component: () => import('pages/config/add-predefinidos.vue'),
         meta: { faturaOpen: true }
       },
       { path: 'lista-gasto',

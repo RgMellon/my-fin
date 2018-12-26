@@ -36,7 +36,6 @@ export default {
 
   mounted() {
     this.setaValores;
-
   },
 
   data () {
@@ -56,8 +55,8 @@ export default {
       let c = new Controle();
         c.dia()
           .then(res => {
-          this.max = res.mediaDia
-          this.model = res.gastoDia
+            this.max = res.mediaDia
+            this.model = res.gastoDia
         });
     },
 

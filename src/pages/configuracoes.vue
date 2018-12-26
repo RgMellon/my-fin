@@ -25,6 +25,13 @@
                 <q-item-side right icon="chevron_right" />
             </q-item>
           </div>
+          <div @click="addPredefinidos()" class="item">
+            <q-item>
+              <q-item-side icon="add" />
+                <q-item-main label="Adicionar predefinidos" />
+                <q-item-side right icon="chevron_right" />
+            </q-item>
+          </div>
       </q-list>
     </template>
   </page-wrapper>
@@ -50,6 +57,9 @@ export default {
      },
      categoria() {
         this.$router.push('config/categoria')
+     },
+     addPredefinidos() {
+        this.$router.push('config/add-predefinidos')
      }
   }
 }

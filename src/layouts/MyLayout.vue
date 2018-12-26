@@ -45,6 +45,9 @@ export default {
       if(obj.direction == 'right') {
         this.$router.push('/adiciona/despesas')
       }
+      if(obj.direction == 'down') {
+        this.$router.push('/predefinido')
+      }
     }
   }
 }

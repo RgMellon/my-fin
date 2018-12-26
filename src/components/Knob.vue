@@ -22,10 +22,9 @@ export default {
   name: 'ComponentKnob',
 
   data () {
-    return {
-
-    }
+    return {}
   },
+
   computed: {
     medeCor() {
         const umTerco = this.maximo * 0.33;
@@ -41,6 +40,6 @@ export default {
 
 <style>
 .text-green {
-   color: #fda900 !important;
+  color: #fda900 !important;
 }
 </style>

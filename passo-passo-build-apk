@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore my-release-key.keystore -alias my-fin-key -keyalg RSA -keysize 2048 -validity 20000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore /home/renan/Documentos/projetos-quasar/myFin/src-cordova/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk my-fin-key
+
+zipalign -v 4  /home/renan/Documentos/projetos-quasar/myFin/src-cordova/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk MyFin.apk

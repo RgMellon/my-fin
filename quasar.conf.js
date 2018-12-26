@@ -67,7 +67,12 @@ module.exports = function (ctx) {
         'QField',
         'QDatetime',
         'QSelect',
-        'QItemSeparator'
+        'QItemSeparator',
+        'QCard',
+        'QCardActions',
+        'QCardSeparator',
+        'QCardTitle',
+        'QItemTile'
       ],
       directives: [
         'Ripple',

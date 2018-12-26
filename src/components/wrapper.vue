@@ -19,5 +19,6 @@ export default {
  .mp {
   padding-left: 1rem;
   padding-right: 1rem;
+  min-height: 0 !important;
 }
 </style>
