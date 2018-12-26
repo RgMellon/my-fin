@@ -92,7 +92,17 @@ export default {
   methods: {
     adicionaGasto() {
       let c = new Compra();
-      c.abater(this.compra);
+      c.abater(this.compra)
+      .then(res =>
+        this.$q.notify({
+          message: `Despesa adiciona`,
+          type: 'positive',
+          icon: 'done',
+          position: 'top-right'
+        })
+      ).then(resetForm => {
+          this.reset;
+      })
     }
   },
 
@@ -115,6 +125,12 @@ export default {
             });
         })
     },
+    reset() {
+      this.compra.titulo = ''
+      this.compra.categoria = ''
+      this.compra.preco = ''
+      this.compra.data_compra = ''
+    }
   }
 
 }
@@ -122,7 +138,7 @@ export default {
 
 <style>
   .q-field-icon {
-    color:#9c27b0;
+    color:#573769;
   }
   .form-add-despesa {
     margin-top: 2rem;
@@ -130,5 +146,9 @@ export default {
 
   .input-add {
     margin-top: 3rem;
+  }
+
+  .bg-purple {
+    background: #573769 !important;
   }
 </style>

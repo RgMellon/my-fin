@@ -2,14 +2,6 @@
   <page-wrapper>
     <template slot="conteudo">
       <q-list highlight>
-          <div @click="gastoMes()" class="item">
-            <q-item>
-              <q-item-side icon="settings" />
-                <q-item-main label="Gastos por Mês" />
-                <q-item-side right icon="chevron_right" />
-            </q-item>
-          </div>
-          <q-item-separator />
           <div @click="listaGastos()" class="item">
             <q-item>
               <q-item-side icon="list" />

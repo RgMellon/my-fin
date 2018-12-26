@@ -1,10 +1,10 @@
 <template>
   <q-layout>
       <q-layout-header>
-          <q-toolbar color="white">
-            <q-btn style="color:#9c27b0" flat round dense  v-go-back=" '/' " icon="arrow_back_ios" />
+          <q-toolbar style="background: #573769 !important">
+            <q-btn style="color:white" flat round dense  v-go-back=" '/' " icon="arrow_back_ios" />
             <q-toolbar-title>
-              <span style="color:#9c27b0"> Adicionar despesa </span>
+              <span style="color:white"> Adicionar despesa </span>
           </q-toolbar-title>
         </q-toolbar>
       </q-layout-header>

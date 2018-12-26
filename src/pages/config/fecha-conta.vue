@@ -152,4 +152,8 @@ export default {
   right: 0;
   left: 0;
 }
+.btn-fechar .q-btn {
+  height: 45px;
+  background:rgb(87, 55, 105) !important;
+}
 </style>

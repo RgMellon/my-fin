@@ -4,7 +4,7 @@ import { path } from '../../aux/path.js'
 export default class Compra {
   abater (compra) {
     return axios.post(`${path()}/compra`, compra)
-      .then(res => console.log(res.data))
+      .then(res => res.data)
   }
 
   comprasAberto () {
