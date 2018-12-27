@@ -44,7 +44,8 @@ const routes = [
     children: [
       { path: '',
         component: () => import('pages/gastos-predefinidos.vue'),
-        name: 'predefinido'
+        name: 'predefinido',
+        meta: { faturaOpen: true }
       }
     ]
   },
