@@ -8,7 +8,7 @@
 
 
 
-<img src="https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg=250x250" width="250" height="350" />
+<img src="https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg" width="250" height="400" />
 
 >> Tela de acompanhamento dos gastos e metas
 
@@ -16,7 +16,7 @@
 
 >> Tela adicionar despesas
 
-<img src="https://user-images.githubusercontent.com/29661994/52164340-e5b1c380-26d6-11e9-8237-34072f4e42da.jpg" width="250" height="350" />
+<img src="https://user-images.githubusercontent.com/29661994/52164340-e5b1c380-26d6-11e9-8237-34072f4e42da.jpg" width="250" height="400" />
 
 >> Tela para fechar a fatura e conferir os gastos 
-<img src="https://user-images.githubusercontent.com/29661994/52164356-2f021300-26d7-11e9-92a3-f1782136f05f.jpg" width="250" height="350" />
+<img src="https://user-images.githubusercontent.com/29661994/52164356-2f021300-26d7-11e9-92a3-f1782136f05f.jpg" width="250" height="400" />
