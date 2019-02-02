@@ -11,7 +11,7 @@
 
 >> Tela de acompanhamento dos gastos e metas
 
-![screenshot_20190202-103041_my-fin](https://user-images.githubusercontent.com/29661994/52164327-c87cf500-26d6-11e9-8324-53aaedbc1ad4.jpg)
+<img src="https://user-images.githubusercontent.com/29661994/52164327-c87cf500-26d6-11e9-8324-53aaedbc1ad4.jpg" width="200" height="300" />
 
 >> Tela adicionar despesas
 
