@@ -7,7 +7,7 @@
 >> Tela Inicial, onde é definido a quantidade de dias e o quanto que você  quer gastar nesses dias 
 
 
-![screenshot_20190202-103124_my-fin](https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg | width=100)
+![screenshot_20190202-103124_my-fin](https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg=250x250)
 
 >> Tela de acompanhamento dos gastos e metas
 
