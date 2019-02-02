@@ -8,15 +8,15 @@
 
 
 
-<img src="https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg" width="250" height="400" />
+<img src="https://user-images.githubusercontent.com/29661994/52164314-8bb0fe00-26d6-11e9-9475-edfcc67c1576.jpg" width="250" height="420" />
 
 >> Tela de acompanhamento dos gastos e metas
 
-<img src="https://user-images.githubusercontent.com/29661994/52164327-c87cf500-26d6-11e9-8324-53aaedbc1ad4.jpg" width="250" height="400" />
+<img src="https://user-images.githubusercontent.com/29661994/52164327-c87cf500-26d6-11e9-8324-53aaedbc1ad4.jpg" width="250" height="420" />
 
 >> Tela adicionar despesas
 
-<img src="https://user-images.githubusercontent.com/29661994/52164340-e5b1c380-26d6-11e9-8237-34072f4e42da.jpg" width="250" height="400" />
+<img src="https://user-images.githubusercontent.com/29661994/52164340-e5b1c380-26d6-11e9-8237-34072f4e42da.jpg" width="250" height="420" />
 
 >> Tela para fechar a fatura e conferir os gastos 
-<img src="https://user-images.githubusercontent.com/29661994/52164356-2f021300-26d7-11e9-92a3-f1782136f05f.jpg" width="250" height="400" />
+<img src="https://user-images.githubusercontent.com/29661994/52164356-2f021300-26d7-11e9-92a3-f1782136f05f.jpg" width="250" height="420" />
